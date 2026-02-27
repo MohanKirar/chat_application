@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+
+      <div class="error" id="error"></div>
+
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <button onclick="login()">Login</button>
+
+      <div class="link">New user? <a href="register.html">Register</a></div>
+    </div>
+
+    <script>
+      async function login() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          const res = await fetch("http://localhost:3000/api/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+          });
+
+          const data = await res.json();
+
+          if (!res.ok) {
+            document.getElementById("error").innerText =
+              data.message || "Login failed";
+            return;
+          }
+          // console.log("Login==>", data.accessToken);
+          // Save token
+          localStorage.setItem("accessToken", data.accessToken);
+
+          // Redirect to users list
+          window.location.href = "users.html";
+        } catch (err) {
+          document.getElementById("error").innerText = "Server error";
+        }
+      }
+    </script>
+  </body>
+</html>

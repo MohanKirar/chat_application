@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat Application</title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="file:///E:/workspace/chatapp/src/socket.js"></script>
+    <link rel="stylesheet" href="file:///E:/workspace/chatapp/css/chat.css" />
+  </head>
+  <body>
+    <!-- USERS LIST -->
+    <div class="users-panel">
+      <h3>Users</h3>
+      <div id="usersList"></div>
+      <!-- Logout button at bottom -->
+      <div class="logout-container">
+        <button id="logoutBtn" onclick="logOut()">Logout</button>
+      </div>
+    </div>
+
+    <!-- CHAT WINDOW -->
+    <div class="chat-panel">
+      <div class="chat-header" id="chatHeader">Select a user to chat</div>
+
+      <div class="chat-messages" id="chatMessages"></div>
+
+      <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </body>
+</html>
