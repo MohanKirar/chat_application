@@ -4,7 +4,7 @@ A real-time one-to-one chat application built using Node.js, Express, MongoDB, S
 Supports instant messaging, message persistence, authentication.
 
 
-![Image Alt](https://github.com/MohanKirar/chat_application/blob/0460efccda818a532625655a39f2acb26e270ac8/Screens.png)
+![Image Alt](https://github.com/MohanKirar/chat_application/blob/d3f0077db62c4145653687bb511ed2160d9c58ad/screenshot.png)
 
 ## Features:
 
