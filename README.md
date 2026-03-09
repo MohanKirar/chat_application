@@ -1,7 +1,10 @@
-Real-Time Chat Application (Socket.IO + Node.js + MongoDB)
+Sample Real-Time Chat Application (Socket.IO + Node.js + MongoDB)
 
 A real-time one-to-one chat application built using Node.js, Express, MongoDB, Socket.IO, JWT authentication, and Redis.
-Supports instant messaging, message persistence, authentication, and clean UI similar to WhatsApp.
+Supports instant messaging, message persistence, authentication.
+
+
+![Image Alt](https://github.com/MohanKirar/chat_application/blob/0460efccda818a532625655a39f2acb26e270ac8/Screens.png)
 
 ## Features:
 
